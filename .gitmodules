@@ -1,0 +1,3 @@
+[submodule "vendor/test-2"]
+	path = vendor/test-2
+	url = https://github.com/qaisjp/test-2
