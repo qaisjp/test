@@ -14,8 +14,4 @@ Only the latest minor version (1.x) of Multi Theft Auto is supported with securi
 
 ## Reporting a Vulnerability or Cheat
 
-If you find a cheat or vulnerability, please do not create a public issue.
-
-Please submit your cheats or security vulnerabilities to @ccw on forum.mtasa.com. Please do not submit them here.
-
-@ccw can be found here: https://forum.mtasa.com/profile/7264-ccw/
+Please send your cheats or security vulnerabilities to [@ccw on forum.mtasa.com](https://forum.mtasa.com/profile/7264-ccw/). Please do not create a public issue here. Thanks!
