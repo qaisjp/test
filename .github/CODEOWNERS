@@ -1,2 +1,4 @@
 # Automatically trigger code reviews for changes to the Lua API
 luadefs/ @qaisjp
+lua/ @qaisjp
+!vendor/lua @qaisjp
