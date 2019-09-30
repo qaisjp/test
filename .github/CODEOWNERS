@@ -1,2 +1,2 @@
 # Automatically trigger code reviews for changes to the Lua API
-mods/deathmatch/logic/luadefs @qaisjp
+mods/deathmatch/logic/luadefs/ @qaisjp
