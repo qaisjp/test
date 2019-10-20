@@ -67,5 +67,5 @@ When you run one of these commands, two index files are created:
 - `$collection_filename.index` - a binary file which is loaded for later runs of this tool
 - `$collection_filename.index.txt` - a text file representing the binary data (not used by this tool)
 
-Note that when you update this tool you should use `--refresh` in your command to ensure that
-the binary file is updated. If you don't do this, 
+Note that when you update this tool you 
+should use `--refresh` in your command to ensure thatthe binary file is updated. If you don't do this, 
