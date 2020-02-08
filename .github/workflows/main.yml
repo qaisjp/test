@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: install check
       run: |
-        GOPROXY=direct go install github.com/qaisjp/check-reviews
+        GOPROXY=direct go get github.com/qaisjp/check-reviews
+        go install github.com/qaisjp/check-reviews
     - name: Test
       run: check-reviews
