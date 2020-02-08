@@ -1,22 +1,4 @@
-# Text Technologies for Data Science
-## Qais Patankar - s1620208
-
-## Installing
-
-You need the `stemming` library installed. Run `pip install stemming`.
-
-If you have `pipenv` installed, you can just use `pipenv install` to install from the given `Pipfile`.
-
-**You must use Python 3.6 or above, like a clean and respectable human that you are.**
-
-## Usage
-
-Here is the output of `python app.py --help`:
-
 ```
-usage: app.py [-h] [-f QUERIES_FILENAME] [-d PRINT_DOC] [-l LIMIT]
-              [-p DECIMAL_PLACES] [-t] [-v] [-r]
-              collection_filename [query_str]
 
 positional arguments:
   collection_filename   Filename for the collection
