@@ -16,4 +16,4 @@ jobs:
         # GOPROXY=direct go get github.com/qaisjp/check-reviews
         # go install github.com/qaisjp/check-reviews
     - name: Test
-      run: ./check-reviews
+      run: ./check-reviews/check-reviews
