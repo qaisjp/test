@@ -1,0 +1,15 @@
+name: CI
+
+on: [pull_request,pull_request_review]
+
+jobs:
+  check-reviews:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: install check
+      run: |
+        GOPROXY=direct go install github.com/qaisjp/check-reviews
+    - name: Test
+      run: check-reviews
