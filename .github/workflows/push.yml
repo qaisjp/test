@@ -6,4 +6,4 @@ jobs:
       - name: get version
         run: powershell -Command Get-Host
       - name: ya
-        run: powershell -Command Get-FileHash
+        run: echo 'hi' > hi && powershell -Command Get-FileHash hi -Algorithm SHA256
