@@ -1,0 +1,9 @@
+on: push
+jobs:
+  main:
+    runs-on: windows-2019
+    steps:
+      - name: get version
+        run: powershell -Command Get-Host
+      - name: ya
+        run: powershell -Command Get-FileHash
