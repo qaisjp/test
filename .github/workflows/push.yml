@@ -4,6 +4,8 @@ jobs:
     runs-on: windows-2019
     steps:
       - name: get version
+        shell: cmd
         run: powershell -Command Get-Host
       - name: ya
+        shell: cmd
         run: echo 'hi' > hi && powershell -Command '(Get-FileHash hi -Algorithm SHA256).Hash'
