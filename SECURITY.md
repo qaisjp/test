@@ -3,7 +3,7 @@
 ## Supported Versions
 
 Only the latest minor version (1.x) of Multi Theft Auto is supported with security updates.
-
+s
 1.5.7 is the final release of Multi Theft Auto that supports Windows XP and Windows Vista.  
 
 | Version            | Supported          |
