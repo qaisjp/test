@@ -152,6 +152,9 @@ local DefaultMixin = {
       subclass.initialize = function(instance, ...) return self.initialize(instance, ...) end
 
       self.subclasses[subclass] = true
+      self.nah = nil
+      print("hello")
+      blah()
       self:subclassed(subclass)
 
       return subclass
