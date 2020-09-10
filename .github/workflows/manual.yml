@@ -5,8 +5,13 @@ name: Update courses.yaml data
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
+  # So you can trigger it from the Actions tab manually
   workflow_dispatch:
-
+  
+  # Automatically run every week: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
+  schedule:
+    # "At 19:00 on Friday" - https://crontab.guru/#0_19_*_*_5
+    - cron: '0 19 * * 5'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -50,6 +55,7 @@ jobs:
       run: python bi-app/courses.yaml/app.py --auto-yaml bi/_data/courses.yaml
     
     # Push the new courses.yaml file to master
+    # (but only do this if the above task told us that the file changed)
     - name: Push courses.yaml
       if: "steps.generate_yaml.outputs.has_changed == 'true'"
       run: |
