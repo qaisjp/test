@@ -44,7 +44,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Generate courses.yaml
-      run: python bi-app/courses.yaml/app.py
+      run: python bi-app/courses.yaml/app.py --dump-yaml > bi/courses.yaml
+    - name: Push courses.yaml
+      run: |
+        cd bi
+        git checkout -B auto-update-courses-yaml
+        git add courses.yaml
+        git commit -m "Update courses.yaml"
+        git push -f
+    
         
         
       
