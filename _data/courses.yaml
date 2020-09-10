@@ -12,7 +12,7 @@ list:
     - 50
     - 50
     delivery: S2
-    delivery_ordinal: 1
+    delivery_ordinal: 2
     diet: April/May
     euclid_code: INFR11199
     euclid_url: http://www.drps.ed.ac.uk/20-21/dpt/cxinfr11199.htm
@@ -1083,4 +1083,3 @@ list:
     level: 9
     name: Work-Based Professional Practice A in Data Analytics
     year: 3
-
