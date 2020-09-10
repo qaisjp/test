@@ -48,6 +48,8 @@ jobs:
     - name: Push courses.yaml
       run: |
         cd bi
+        git config user.name "Better Informatics"
+        git config user.email "admin@betterinformatics.com"
         git checkout -B auto-update-courses-yaml
         git add courses.yaml
         git commit -m "Update courses.yaml"
