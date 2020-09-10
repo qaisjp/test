@@ -51,7 +51,7 @@ jobs:
     
     # Push the new courses.yaml file to master
     - name: Push courses.yaml
-      if: "steps.generate_yaml.outputs.has_changed == true"
+      if: "steps.generate_yaml.outputs.has_changed == True"
       run: |
         cd bi
         
