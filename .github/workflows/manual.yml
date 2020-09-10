@@ -7,6 +7,7 @@ name: Update courses.yaml data
 on:
   workflow_dispatch:
 
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
@@ -45,11 +46,12 @@ jobs:
     
     # Actually generate courses.yaml
     - name: Generate courses.yaml
+      id: generate_yaml
       run: python bi-app/courses.yaml/app.py --auto-yaml bi/_data/courses.yaml
     
     # Push the new courses.yaml file to master
     - name: Push courses.yaml
-      if: "has_changed == true"
+      if: steps.generate_yaml.outputs.has_changed == "true"
       run: |
         cd bi
         
