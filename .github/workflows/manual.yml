@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Update courses.yaml data
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -16,27 +16,40 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    
+    # We need Python
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
+    
+    # We need to fetch the code where our courses.yaml generator lives
     - name: Fetch bi-app code
       uses: actions/checkout@v2
       with:
         repository: compsoc-edinburgh/bi-app
         path: bi-app
+    
+    # We obviously need to clone the betterinformatics repo itself
     - name: Clone our repository
       uses: actions/checkout@v2
       with:
         path: bi
+    
+    # Install the dependencies for the courses.yaml generator
     - name: Install dependencies
       run: |
         cd bi-app/courses.yaml
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    
+    # Actually generate courses.yaml
     - name: Generate courses.yaml
-      run: python bi-app/courses.yaml/app.py --dump-yaml > bi/courses.yaml
+      run: python bi-app/courses.yaml/app.py --auto-yaml bi/_data/courses.yaml
+    
+    # Push the new courses.yaml file to master
     - name: Push courses.yaml
+      if: "has_changed == true"
       run: |
         cd bi
         
@@ -50,10 +63,5 @@ jobs:
         git config user.email "42103905+better-informatics[bot]@users.noreply.github.com"
         
         git add courses.yaml
-        git commit -m "Update courses.yaml"
+        git commit -m "Automatically update courses.yaml"
         git push origin master
-    
-        
-        
-      
-      
