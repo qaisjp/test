@@ -44,7 +44,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -f requirements.txt
     - name: Generate courses.yaml
-      run: python app.py
+      run: python bi-app/courses.yaml/app.py
         
         
       
