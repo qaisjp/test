@@ -64,6 +64,6 @@ jobs:
         # See this for more information: https://github.community/t/github-actions-bot-email-address/17204/5
         git config user.email "42103905+better-informatics[bot]@users.noreply.github.com"
         
-        git add courses.yaml
+        git add _data/courses.yaml
         git commit -m "Automatically update courses.yaml"
         git push origin master
