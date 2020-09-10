@@ -44,7 +44,7 @@ jobs:
         git checkout -B auto-update-courses-yaml
         git add courses.yaml
         git commit -m "Update courses.yaml"
-        git push -f
+        git push origin auto-update-courses-yaml --force
     
         
         
