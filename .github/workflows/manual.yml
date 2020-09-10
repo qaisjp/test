@@ -39,12 +39,19 @@ jobs:
     - name: Push courses.yaml
       run: |
         cd bi
+        
         git config user.name "Better Informatics"
-        git config user.email "admin@betterinformatics.com"
-        git checkout -B auto-update-courses-yaml
+        
+        # The number ID in the email comes from https://api.github.com/users/better-informatics%5Bbot%5D
+        # Which is not an actual user account. It's a bot:
+        # - https://github.com/organizations/compsoc-edinburgh/settings/apps/better-informatics
+        #
+        # See this for more information: https://github.community/t/github-actions-bot-email-address/17204/5
+        git config user.email "42103905+better-informatics[bot]@users.noreply.github.com"
+        
         git add courses.yaml
         git commit -m "Update courses.yaml"
-        git push origin auto-update-courses-yaml --force
+        git push origin master
     
         
         
