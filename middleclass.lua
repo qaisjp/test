@@ -1,4 +1,4 @@
--- foobar baz
+-- foobar baz aba
 local middleclass = {
   _VERSION     = 'middleclass v4.1.1',
   _DESCRIPTION = 'Object Orientation for Lua',
