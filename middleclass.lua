@@ -1,5 +1,5 @@
 -- foobar2!!!
-local middleclass = {
+local middleclass = {ss
   _VERSION     = 'middleclass v4.1.1',
   _DESCRIPTION = 'Object Orientation for Lua',
   _URL         = 'https://github.com/kikito/middleclass patch5',
