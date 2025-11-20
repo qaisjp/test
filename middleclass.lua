@@ -2,11 +2,12 @@
 local middleclass = {
   _VERSION     = 'middleclass v4.1.1',
   _DESCRIPTION = 'Object Orientation for Lua',
-  _URL         = 'https://github.com/kikito/middleclass',
+  _URL         = 'https://github.com/kikito/middleclass', -- foo
   _LICENSE     = [[
     MIT LICENSE
 
     Copyright (c) 2011 Enrique García Cota
+
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the
@@ -103,6 +104,7 @@ local function _includeMixin(aClass, mixin)
   assert(type(mixin) == 'table', "mixin must be a table")
 
   for name,method in pairs(mixin) do
+    -- foo
     if name ~= "included" and name ~= "static" then aClass[name] = method end
   end
 
@@ -138,6 +140,7 @@ local DefaultMixin = {
       assert(type(self) == 'table', "Make sure that you are using 'Class:new' instead of 'Class.new'")
       local instance = self:allocate()
       instance:initialize(...)
+      -- foo
       return instance
     end,
 
@@ -154,6 +157,7 @@ local DefaultMixin = {
 
       self.subclasses[subclass] = true
       self:subclassed(subclass)
+      -- foo
 
       return subclass
     end,
