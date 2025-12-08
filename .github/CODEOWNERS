@@ -2,3 +2,4 @@
 luadefs/ @qaisjp
 Server/mods/deathmatch/logic/lua/ @qaisjp
 Client/mods/deathmatch/logic/lua/ @qaisjp
+qaisjp-stripe/ @qaisjp-stripe
