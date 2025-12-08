@@ -1,6 +1,6 @@
 # Security Policy
 
-## Supported Versions
+## Supported Versionss
 
 Only the latest minor version (1.x) of Multi Theft Auto is supported with security updates.
 
